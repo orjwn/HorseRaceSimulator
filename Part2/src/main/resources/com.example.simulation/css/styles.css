@@ -1,0 +1,66 @@
+.table-view {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(255, 0, 0, 0.1);
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: rgba(255, 0, 0, 0.1);
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F5F5F5;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FFD700;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #800000;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: #FFFFFF;
+}
+
+.form_container{
+    -fx-background-color: #F5F5F5;
+}
+
+.form_container Text{
+    -fx-font-size: 1.2em;
+    -fx-fill: #800000;
+    -fx-font-weight: bold;
+}
+
+.form_container ComboBox {
+    -fx-pref-height: 35;
+    -fx-font-size: 1.3em;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, #BEBEBE, 3, 0, 0, 3);
+}
+
+.form_container TextField{
+    -fx-pref-height: 35;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.3em;
+    -fx-effect: dropshadow(three-pass-box, #BEBEBE, 3, 0, 0, 3);
+}
+
+.form_container Button{
+    -fx-background-color: linear-gradient(to right, #800000, #8B0000);
+    -fx-effect: dropshadow(three-pass-box, #BEBEBE, 3, 0, 0, 3);
+    -fx-pref-width: 100;
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #FFFFFF;
+}
+
+.form_container Button:hover{
+    -fx-cursor: hand;
+}

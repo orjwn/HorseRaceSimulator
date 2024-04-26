@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="934.0" prefWidth="1227.0" styleClass="form_container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation.controllers.SimulationController">
+    <children>
+        <TableView fx:id="horseDataTable" layoutX="310.0" layoutY="67.0" onMouseClicked="#getData" prefHeight="291.0" prefWidth="603.0" AnchorPane.topAnchor="67.0">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="135.0" text="Name" />
+                <TableColumn fx:id="colBreed" prefWidth="125.0" text="Horse Breed" />
+                <TableColumn fx:id="colCoatColour" prefWidth="100.0" text="Coat Colour" />
+                <TableColumn fx:id="colTotalRaceWon" prefWidth="120.0" text="Total Race Won" />
+            <TableColumn fx:id="colWinningOdds" prefWidth="120.0" text="Winning Odds" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnStart" layoutX="1093.0" layoutY="388.0" mnemonicParsing="false" onAction="#startRace" prefHeight="34.0" prefWidth="110.0" text="Start Race" />
+        <TextField fx:id="betAmountField" layoutX="956.0" layoutY="126.0" prefWidth="237.0" promptText="Enter Bet Amount" />
+        <ComboBox fx:id="horseComboBox" layoutX="956.0" layoutY="212.0" prefWidth="237.0" promptText="Select A Horse To Bet" />
+        <Text layoutX="957.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Money" />
+        <Text layoutX="962.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Distance" />
+        <Text layoutX="958.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet On" />
+        <ComboBox fx:id="raceTrackLengthComboBox" layoutX="956.0" layoutY="306.0" prefWidth="237.0" promptText="Select Race Distance" />
+        <Canvas fx:id="canvas" height="417.0" layoutX="-1.0" layoutY="515.0" styleClass="canvas-background" width="1227.0" />
+          <Text layoutX="31.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coat Colour" />
+          <Text layoutX="29.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed" />
+          <TextField fx:id="tName" layoutX="24.0" layoutY="126.0" prefWidth="247.0" promptText="Enter Horse Name" />
+          <Text layoutX="29.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name">
+              <font>
+                  <Font name="System Bold" size="12.0" />
+              </font>
+      </Text>
+      <ComboBox fx:id="cbCoatColour" layoutX="24.0" layoutY="306.0" prefHeight="37.0" prefWidth="247.0" promptText="Select Coat Colour" styleClass="form_container" />
+      <TextField fx:id="tBreed" layoutX="24.0" layoutY="212.0" prefWidth="247.0" promptText="Enter Horse Breed" />
+      <Text layoutX="323.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Separator layoutX="411.0" layoutY="515.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="31.0" />
+      <Separator layoutX="416.0" layoutY="515.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="21.0" />
+      <Separator layoutX="412.0" layoutY="515.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="14.0" />
+      <Separator layoutY="517.0" prefHeight="0.0" prefWidth="1227.0" />
+      <Text layoutX="323.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="323.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="323.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="323.0" layoutY="843.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="323.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Race Lanes" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+          <Button fx:id="btnClear" layoutX="620.0" layoutY="389.0" mnemonicParsing="false" onAction="#clearFields" text="Refresh" />
+          <Button fx:id="btnDelete" layoutX="483.0" layoutY="388.0" mnemonicParsing="false" onAction="#deleteHorse" prefHeight="35.0" text="Remove" />
+          <Button fx:id="btnUpdate" layoutX="157.0" layoutY="388.0" mnemonicParsing="false" onAction="#updateHorse" text="Edit" />
+          <Button fx:id="btnSave" layoutX="21.0" layoutY="388.0" mnemonicParsing="false" onAction="#createHorse" text="Create" />
+      <Separator layoutX="1053.0" layoutY="515.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="6.0" />
+      <Separator layoutX="1042.0" layoutY="515.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="14.0" />
+      <Text layoutX="1067.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="1067.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="1067.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="1067.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="1067.0" layoutY="843.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="1067.0" layoutY="916.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Line" wrappingWidth="116.76406860351562">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtShowWinner" layoutX="670.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Result" />
+    </children>
+</AnchorPane>
